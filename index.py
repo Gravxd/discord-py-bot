@@ -17,7 +17,7 @@ class MyClient(discord.Client):
         if message.content == prefix + 'embed': # if the message that is sent is !embed
             embed1 = discord.Embed(title="this is a title", description="this is a description!", color=0x00ff00) # build the embed
             await message.channel.send(embed = embed1) # send an embed with the listed characteristics 
-        
+        print('Operating in', client.guilds.size, 'servers!') # server count will display to terminal / console
 
 client = MyClient() # Define the client variable  - We already defined MyClient() with 'class MyClient(discord.Client):'
 client.run('tokenhere') # discord login (bot token) make one at https://discord.dev --> Applications --> Make New --> Bot
